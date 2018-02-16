@@ -1,0 +1,39 @@
+{
+    // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+    "editor.formatOnSave": true,
+    // Enable/disable default JavaScript formatter (For Prettier)
+    "javascript.format.enable": false,
+    // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
+    "prettier.eslintIntegration": true,
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "eslint.enable": true, //Enable eslint
+    "eslint.options": {
+        "extensions": [ //List of file extensions to activate eslint
+            ".html",
+            ".js",
+            ".vue",
+            ".jsx"
+        ]
+    },
+    "eslint.validate": [
+        { //list of extensions to validate
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true //Autofix any fixable errors when linting
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        }
+    ],
+    // Run the linter on save (onSave) or on type (onType)
+    "eslint.run": "onSave",
+    "eslint.autoFixOnSave": true //Autofix any fixable errors when linting
+}
